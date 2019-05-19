@@ -1,0 +1,84 @@
+* {
+
+    &+h1,
+    &+h2,
+    &+h3,
+    &+h4,
+    &+h5,
+    &+h6,
+    &+p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin: 0;
+
+    &+* {
+        margin-top: 1.5rem;
+    }
+}
+
+h1 {
+    font-size: $h1-size;
+    font-weight: $h1-weight;
+    font-family: $h1-font;
+    text-transform: $h1-transform;
+    line-height: $h1-lineheight;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+h2 {
+    font-size: $h2-size;
+    font-weight: $h2-weight;
+    font-family: $h2-font;
+    text-transform: $h2-transform;
+    line-height: $h2-lineheight;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+h3 {
+    font-size: $h3-size;
+    font-weight: $h3-weight;
+    font-family: $h3-font;
+    text-transform: $h3-transform;
+    line-height: $h3-lineheight;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+h4 {
+    font-size: $h4-size;
+    font-weight: $h4-weight;
+    font-family: $h4-font;
+    text-transform: $h4-transform;
+    line-height: $h4-lineheight;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+h5 {
+    font-size: $h5-size;
+    font-weight: $h5-weight;
+    font-family: $h5-font;
+    text-transform: $h5-transform;
+    line-height: $h5-lineheight;
+}
+
+h6 {
+    font-size: $h6-size;
+    font-weight: $h6-weight;
+    font-family: $h6-font;
+    text-transform: $h6-transform;
+    line-height: $h6-lineheight;
+}

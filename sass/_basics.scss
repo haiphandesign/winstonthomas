@@ -1,0 +1,80 @@
+//  ________  ________  ________  ___  ________  ________      
+// |\   __  \|\   __  \|\   ____\|\  \|\   ____\|\   ____\     
+// \ \  \|\ /\ \  \|\  \ \  \___|\ \  \ \  \___|\ \  \___|_    
+//  \ \   __  \ \   __  \ \_____  \ \  \ \  \    \ \_____  \   
+//   \ \  \|\  \ \  \ \  \|____|\  \ \  \ \  \____\|____|\  \  
+//    \ \_______\ \__\ \__\____\_\  \ \__\ \_______\____\_\  \ 
+//     \|_______|\|__|\|__|\_________\|__|\|_______|\_________\
+//                        \|_________|             \|_________|
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap&subset=vietnamese');
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('bodoni.eot?#iefix') format('embedded-opentype'),
+        url('bodoni.woff2') format('woff2'),
+        url('bodoni.woff') format('woff'),
+        url('bodoni.ttf') format('truetype'),
+        url('bodoni.svg#LTC Bodoni 175 W01 Regular') format('svg');
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $text-size;
+    color: $color-text-regular;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: $color-background;
+
+    &.page-home {
+        background-color: white;
+    }
+
+    &.logged-in {
+        .logged-in {
+            display: initial;
+        }
+
+        .logged-out {
+            display: none !important;
+        }
+    }
+
+    &.logged-out {
+        .logged-out {
+            display: initial;
+        }
+
+        .logged-in {
+            display: none !important;
+        }
+    }
+}
+
+* {
+    user-select: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    transition: all .25s;
+
+    &:hover {
+        color: $color-accent-primary;
+    }
+}
+
+.container-fluid {
+    padding: 0 5vw;
+}
+
+@mixin ui-shadow {
+    box-shadow: 0 1px 4px rgba($color-text-regular, .125);
+}
