@@ -1,0 +1,95 @@
+section {
+    position: relative;
+
+    &+section {
+        margin-top: 1rem;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include breakpoint(xs) {
+        max-width: 540px;
+    }
+
+    @include breakpoint(sm) {
+        max-width: 720px;
+    }
+
+    @include breakpoint(md) {
+        max-width: 960px;
+    }
+
+    @include breakpoint(lg) {
+        max-width: 1140px;
+    }
+}
+
+.container-fluid {
+    padding: 0 1rem;
+
+    @include breakpoint(xs) {
+        padding: 0 5vw;
+    }
+}
+
+@mixin ui-shadow {
+    box-shadow: 0 1px 4px rgba($color-text-regular, .125);
+}
+
+@mixin ui-border {
+    border: $ui-border-width solid $ui-border-color;
+}
+
+input {
+    @include ui-border();
+
+    height: 2.5rem;
+    padding: .5rem;
+
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+
+    &::placeholder {
+        color: rgba($color-text-regular, .5);
+        font-size: .85rem;
+    }
+}
+
+.button {
+    text-transform: uppercase;
+    font-size: .85rem;
+    font-weight: bold;
+
+    padding: 0 2.5rem;
+    background-color: $ui-border-color;
+}
+
+@mixin ui-title-underline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: .35rem;
+
+    @include ui-border;
+    border-left: 0;
+    border-right: 0;
+
+    margin: 1.5rem auto;
+}
+
+.divider {
+    @include ui-title-underline;
+
+    &.small {
+        width: 3.5rem;
+    }
+}

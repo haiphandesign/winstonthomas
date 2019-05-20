@@ -23,7 +23,7 @@ $(document).ready(function () {
         headerHeight = $('#header .header--menu');
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() >= 10) {
+        if ($(this).scrollTop() >= 150) {
             $("#header").addClass("is-scroll");
         } else {
             $("#header").removeClass("is-scroll");
@@ -45,3 +45,22 @@ $(document).ready(function () {
     });
 
 });
+
+
+// Global: Header Spacer
+
+function headerspacing() {
+    headerspacer = $('#header').outerHeight(true);
+    heroheight = $(window).height() - headerspacer;
+    $('.header--spacer').css('height', headerspacer);
+    $('#hero').css('height', heroheight);
+};
+
+window.setTimeout(headerspacing, 100);
+
+
+
+
+$('.header--sub-close').click(function () {
+    $(this).parent().hide();
+})

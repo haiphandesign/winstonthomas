@@ -6,12 +6,12 @@
     box-shadow: 0 5px 20px rgba($color-text-regular, .04);
 
     transition: all .25s;
+
+    z-index: 999;
 }
 
 .header--outer {
     background-color: white;
-
-    padding-top: 2rem;
 
     border-bottom: $ui-border-width solid $ui-border-color;
 }
@@ -32,20 +32,32 @@
 
     height: 4rem;
 
-    margin: 2rem 0;
+    transform: scale(.75);
+
+    margin: 1rem 0;
 
     transition: all .25s, max-height .5s;
 
-    * {
-        margin: 0;
+    @include breakpoint(md) {
+        transform: scale(1);
+
+        margin: 2rem 0;
     }
 
-    h1 {
-        height: 2.5rem;
+    * {
+        margin: 0;
+        line-height: 1;
     }
+
+    // h1 {
+    //     // height: 2.5rem;
+    // }
 
     h6 {
         margin-top: .5rem;
+
+        font-size: .5rem;
+
         transition: all .25s;
     }
 }
@@ -66,6 +78,8 @@
     color: white;
 
     background-color: $color-text-regular;
+
+    z-index: 99;
 }
 
 .header--sub-close {
@@ -86,9 +100,13 @@
 }
 
 .header--menu {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+
+    @include breakpoint(md) {
+        display: flex;
+    }
 }
 
 .header--menu-primary {
@@ -109,7 +127,7 @@
         height: 3rem;
 
         text-transform: uppercase;
-        font-size: .75rem;
+        font-size: .85rem;
         font-weight: bold;
 
         padding: 0 1.5rem;
@@ -157,10 +175,18 @@
 }
 
 #header.is-scroll {
-    margin-top: -5rem;
+    margin-top: 0;
+
+    @include breakpoint(md) {
+        margin-top: -3rem;
+    }
 
     .header--main {
-        transform: translateY(3rem);
+        transform: translateY(0);
+
+        @include breakpoint(md) {
+            transform: translateY(3rem);
+        }
     }
 
     .header--logo {
@@ -178,10 +204,10 @@
     }
 
     &.is-scroll-up {
-        margin-top: -2rem;
+        margin-top: 0;
 
         .header--main {
-            transform: translateY(0.25rem);
+            transform: translateY(0);
         }
 
         .header--logo {

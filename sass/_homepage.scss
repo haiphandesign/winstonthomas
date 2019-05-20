@@ -1,0 +1,246 @@
+#hero {
+    display: block;
+
+    width: 100%;
+    height: 100vh;
+    max-height: 60rem;
+
+    background-color: $ui-border-color;
+}
+
+
+#intro {
+    padding: 7.5rem 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2 {
+        text-align: center;
+
+        max-width: 50rem;
+    }
+
+    p {
+        text-transform: lowercase;
+        font-style: italic;
+        color: $color-text-light;
+
+        margin: 2rem 0;
+    }
+}
+
+.intro--menu {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.intro--menu-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .85rem;
+
+    border-bottom: .2rem solid currentColor;
+
+    padding-bottom: .3rem;
+
+    &+.intro--menu-link {
+        margin-left: 2rem;
+    }
+}
+
+#private-club {
+    width: 100%;
+
+    color: white;
+
+    background: $color-text-regular;
+
+    padding: 2.5rem 0 0;
+
+    @include breakpoint(md) {
+        padding: 0;
+
+        background: linear-gradient(to right,
+                rgba($color-text-regular, 1) 0%,
+                rgba($color-text-regular, 1) 90%,
+                rgba($color-text-regular, 0) 90%,
+                rgba($color-text-regular, 0) 100%);
+    }
+
+    .row {
+        margin: 0;
+    }
+}
+
+.private-club--left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 1rem;
+
+    @include breakpoint(md) {
+        padding: 5vw;
+    }
+
+    .content-top {
+        h1 {
+            color: $color-accent-secondary;
+        }
+
+        p {
+            max-width: 40rem;
+        }
+    }
+
+    .content-bottom {
+        margin-top: 2.5rem;
+
+        h5 {
+            color: $color-accent-secondary;
+
+            @include breakpoint(md) {
+                color: white;
+            }
+        }
+
+        p {
+            max-width: 20rem;
+            color: white;
+
+            @include breakpoint(md) {
+                color: $color-accent-secondary;
+            }
+        }
+    }
+}
+
+.private-club--right {
+    display: flex;
+    align-items: center;
+
+    padding: 1.5rem 0 0;
+
+    @include breakpoint(md) {
+        padding: 5vw 0;
+    }
+
+    img {
+        display: block;
+        height: 60vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+#enquiry {
+    padding: 5rem 0;
+
+    .container {
+        text-align: center;
+
+        h2 {
+            text-transform: uppercase;
+            margin-top: .5rem;
+        }
+    }
+}
+
+#mailling-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include ui-border;
+    border-right: 0;
+    border-left: 0;
+
+    margin-bottom: 3rem;
+    padding: 2rem;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+
+        >* {
+            +* {
+                margin-left: 5rem;
+            }
+        }
+    }
+
+    &:after {
+        position: absolute;
+        bottom: -0.35rem;
+        left: 0;
+        right: 0;
+
+        content: '';
+        display: block;
+
+        height: 1px;
+        width: 100%;
+
+        background-color: $ui-border-color;
+    }
+}
+
+.mailing-list-title {
+    text-align: center;
+
+    margin-bottom: 1rem;
+
+    @include breakpoint(md) {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        margin-top: 0rem;
+    }
+}
+
+.mailing-list-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+    }
+
+    input {
+        width: 80vw;
+
+        text-align: center;
+
+        &+input {
+            margin-top: .5rem;
+        }
+
+        &::placeholder {
+            text-align: center;
+        }
+
+        @include breakpoint(md) {
+            width: auto;
+
+            &+input {
+                margin-top: 0;
+                margin-left: .5rem;
+            }
+        }
+    }
+}
