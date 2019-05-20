@@ -3,9 +3,75 @@
 
     width: 100%;
     height: 100vh;
-    max-height: 60rem;
+    // max-height: 60rem;
 
-    background-color: $ui-border-color;
+    padding: 0 !important;
+
+    // background-color: $ui-border-color;
+}
+
+.hero--carousel {
+
+    .flickity-page-dots {
+        max-width: 18rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        left: 0;
+        right: 0;
+        bottom: -1.5rem;
+        margin: 0 auto;
+    }
+
+    .flickity-button {
+        z-index: 5;
+    }
+
+    .dot {
+        display: inline-block;
+        width: 5rem;
+        height: .2rem;
+        margin: 0;
+        background: $color-text-regular;
+        // background: white;
+        border-radius: 0;
+        opacity: 0.25;
+        cursor: pointer;
+    }
+}
+
+.hero--carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: white;
+
+    background: rgba(black, 0.25);
+}
+
+.hero--carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    // background: red;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 
@@ -66,10 +132,11 @@
 
     background: $color-text-regular;
 
-    padding: 2.5rem 0 0;
+    padding-bottom: 0 !important;
 
     @include breakpoint(md) {
-        padding: 0;
+
+        padding-bottom: 5rem !important;
 
         background: linear-gradient(to right,
                 rgba($color-text-regular, 1) 0%,
@@ -92,7 +159,7 @@
     padding: 1rem;
 
     @include breakpoint(md) {
-        padding: 5vw;
+        padding: 0 5vw;
     }
 
     .content-top {
@@ -106,7 +173,7 @@
     }
 
     .content-bottom {
-        margin-top: 2.5rem;
+        margin-top: 3rem;
 
         h5 {
             color: $color-accent-secondary;
@@ -134,7 +201,7 @@
     padding: 1.5rem 0 0;
 
     @include breakpoint(md) {
-        padding: 5vw 0;
+        padding: 0;
     }
 
     img {
@@ -155,6 +222,12 @@
             text-transform: uppercase;
             margin-top: .5rem;
         }
+
+        a {
+            &:hover {
+                color: $color-accent-secondary;
+            }
+        }
     }
 }
 
@@ -169,7 +242,7 @@
     border-left: 0;
 
     margin-bottom: 3rem;
-    padding: 2rem;
+    padding: 2rem 0 !important;
 
     @include breakpoint(md) {
         flex-direction: row;

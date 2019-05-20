@@ -1,6 +1,11 @@
 section {
     position: relative;
 
+    &:not(#header) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
     &+section {
         margin-top: 1rem;
     }
@@ -33,7 +38,7 @@ section {
 .container-fluid {
     padding: 0 1rem;
 
-    @include breakpoint(xs) {
+    @include breakpoint(md) {
         padding: 0 5vw;
     }
 }
@@ -71,6 +76,48 @@ input {
     background-color: $ui-border-color;
 }
 
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    h5 {
+        margin: 0;
+    }
+
+    &.left {
+        @include breakpoint(md) {
+            align-items: flex-start;
+            text-align: left;
+
+            &.divider {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &.gold {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $color-accent-secondary;
+        }
+
+        .divider {
+            border-color: $color-accent-secondary;
+            opacity: .5;
+        }
+
+    }
+}
+
 @mixin ui-title-underline {
     display: flex;
     align-items: center;
@@ -91,5 +138,10 @@ input {
 
     &.small {
         width: 3.5rem;
+    }
+
+    &.gold {
+        border-color: $color-accent-secondary;
+        opacity: .25;
     }
 }

@@ -51,9 +51,11 @@ $(document).ready(function () {
 
 function headerspacing() {
     headerspacer = $('#header').outerHeight(true);
-    heroheight = $(window).height() - headerspacer;
+    heroheight = 90 * $(window).height() / 100 - headerspacer;
     $('.header--spacer').css('height', headerspacer);
     $('#hero').css('height', heroheight);
+    $('.hero--carousel-item').css('height', heroheight);
+    $('.hero--carousel-item img').css('height', heroheight);
 };
 
 window.setTimeout(headerspacing, 100);
@@ -61,6 +63,12 @@ window.setTimeout(headerspacing, 100);
 
 
 
-$('.header--sub-close').click(function () {
-    $(this).parent().hide();
-})
+window.setTimeout(function () {
+    $('.hero--carousel').flickity({
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        autoPlay: 3000,
+        fullscreen: true
+    });
+}, 200);
