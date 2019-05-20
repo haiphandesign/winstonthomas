@@ -68,12 +68,30 @@ input {
 }
 
 .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     text-transform: uppercase;
     font-size: .85rem;
     font-weight: bold;
 
-    padding: 0 2.5rem;
-    background-color: $ui-border-color;
+    &.medium {
+        height: 3rem;
+
+        padding: 0 2rem;
+    }
+
+    &.ghost {
+        background: transparent;
+
+        @include ui-border;
+        border-width: .1rem;
+
+        &.gold {
+            border-color: $color-accent-secondary;
+        }
+    }
 }
 
 @mixin ui-title-underline {
