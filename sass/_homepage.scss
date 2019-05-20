@@ -46,6 +46,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
 
     display: flex;
     flex-direction: column;
@@ -94,11 +95,17 @@
     }
 
     p {
+        font-size: .85rem;
         text-transform: lowercase;
         font-style: italic;
         color: $color-text-light;
 
         margin: 2rem 0;
+    }
+
+    .signature {
+        width: 20rem;
+        margin: 4rem 1rem 2rem;
     }
 }
 
@@ -126,6 +133,133 @@
         margin-left: 2rem;
     }
 }
+
+.blog--wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.blog--featured {
+    flex: 0 50%;
+}
+
+.blog--featured-item {
+    display: flex;
+    flex-direction: column;
+
+    &-featured {
+        height: 12rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        height: 12rem;
+
+        .entry-category {
+            text-transform: uppercase;
+            font-size: .85rem;
+            font-weight: bold;
+
+            margin-bottom: auto;
+        }
+
+        .entry-title {
+            font-family: 'Bodoni', serif;
+            font-size: 1.5rem;
+        }
+
+        .entry-content {
+            display: none;
+        }
+
+        .entry-meta {
+            text-transform: uppercase;
+            font-size: .85rem;
+            color: $color-text-light;
+
+            margin-top: 1rem;
+        }
+
+        @include breakpoint(md) {
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+
+.blog--gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 0 50%;
+}
+
+.blog--gallery-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    &+.blog--gallery-item {
+        margin-top: 2rem;
+    }
+
+    &-featured {
+        height: 12rem;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        height: 12rem;
+
+        .entry-category {
+            text-transform: uppercase;
+            font-size: .85rem;
+            font-weight: bold;
+
+            margin-bottom: auto;
+        }
+
+        .entry-title {
+            font-family: 'Bodoni', serif;
+            font-size: 1.5rem;
+        }
+
+        .entry-content {
+            display: none;
+        }
+
+        .entry-meta {
+            text-transform: uppercase;
+            font-size: .85rem;
+            color: $color-text-light;
+
+            margin-top: 1rem;
+        }
+
+        @include breakpoint(md) {
+            margin-left: 1.5rem;
+        }
+    }
+}
+
 
 #private-club {
     width: 100%;

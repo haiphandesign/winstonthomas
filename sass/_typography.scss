@@ -81,30 +81,3 @@ h6 {
     text-transform: $h6-transform;
     line-height: $h6-lineheight;
 }
-
-
-
-
-
-h5 {
-    &.title {
-        text-align: center;
-        letter-spacing: .2em;
-
-        &:after {
-            content: '';
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            width: 5rem;
-            height: .35rem;
-
-            @include ui-border;
-            border-left: 0;
-            border-right: 0;
-
-            margin: 1.5rem auto;
-        }
-    }
-}

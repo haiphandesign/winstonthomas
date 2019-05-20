@@ -65,12 +65,11 @@ window.setTimeout(headerspacing, 100);
 
 window.setTimeout(function () {
     $('.hero--carousel').flickity({
+        cellSelector: '.hero--carousel-item',
         cellAlign: 'left',
         contain: true,
         wrapAround: true,
         autoPlay: 3000,
-        selectedAttraction: 0.01,
-        friction: 0.15,
         prevNextButtons: false
     });
 }, 200);
