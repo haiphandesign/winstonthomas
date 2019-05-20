@@ -69,6 +69,8 @@ window.setTimeout(function () {
         contain: true,
         wrapAround: true,
         autoPlay: 3000,
-        fullscreen: true
+        selectedAttraction: 0.01,
+        friction: 0.15,
+        prevNextButtons: false
     });
 }, 200);
