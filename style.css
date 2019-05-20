@@ -1147,6 +1147,7 @@ h5.title:after {
   height: 100%;
   color: white;
   background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
 }
 
 .hero--carousel-item {
