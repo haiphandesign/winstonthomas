@@ -30,21 +30,57 @@ $(document).ready(function () {
         }
     });
 
-    $(window).scroll(function () {
-        var currentScrollPosition = $(window).scrollTop();
-        var headerHeight = $('#header .header--menu').height();
+    // $(window).scroll(function () {
+    //     var currentScrollPosition = $(window).scrollTop();
 
-        currentScrollTop = currentScrollPosition;
+    //     currentScrollTop = currentScrollPosition;
 
-        if (currentScrollPositionNew < currentScrollTop && currentScrollPosition > headerHeight + headerHeight) {
-            $('#header').removeClass("is-scroll-up");
-        } else if (currentScrollPositionNew > currentScrollTop && !(currentScrollPosition <= headerHeight)) {
-            $('#header').addClass("is-scroll-up");
-        }
-        currentScrollPositionNew = currentScrollTop;
-    });
+    //     if (currentScrollPositionNew < currentScrollTop) {
+    //         $('#header').removeClass("is-scroll-up");
+    //     } else if (currentScrollPositionNew > currentScrollTop) {
+    //         $('#header').addClass("is-scroll-up");
+    //     }
+    //     currentScrollPositionNew = currentScrollTop;
+    // });
 
 });
+
+
+function debounce(func, wait = 10, immediate = true) {
+    let timeout;
+    return function () {
+        let context = this, args = arguments;
+        let later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+let scrollPos = 0;
+const nav = document.querySelector('#header');
+
+function checkPosition() {
+    let windowY = window.scrollY;
+    if (windowY < scrollPos) {
+        // Scrolling UP
+        nav.classList.add('is-scroll-up');
+    } else {
+        // Scrolling DOWN
+        nav.classList.remove('is-scroll-up');
+    }
+    scrollPos = windowY;
+}
+
+// window.addEventListener('scroll', checkPosition);
+window.addEventListener('scroll', debounce(checkPosition));
+
+
+
 
 
 // Global: Header Spacer
