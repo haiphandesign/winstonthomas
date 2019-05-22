@@ -60,6 +60,7 @@ input {
     border-radius: 0;
     box-shadow: none;
     -webkit-appearance: none;
+    -webkit-user-select: text;
 
     &::placeholder {
         color: rgba($color-text-regular, .5);

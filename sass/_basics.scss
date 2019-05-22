@@ -20,6 +20,8 @@
 }
 
 html {
+    position: relative;
+
     font-family: 'Montserrat', sans-serif;
     font-size: $text-size;
     color: $color-text-regular;
@@ -27,9 +29,12 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-stroke-width: 0.2px;
+
 }
 
 body {
+    position: relative;
+
     background-color: $color-background;
 
     &.page-home {

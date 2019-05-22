@@ -17,9 +17,14 @@
     <section id="header">
         <div class="header--outer">
             <div class="header--main container-fluid">
-                <div class="header--left"></div>
+                <div class="header--left">
+                    <div class="header--menu-toggle">
+                        <i class="far fa-bars"></i>
+                    </div>
+                </div>
                 <div class="header--logo">
-                    <h1>Winston Thomas</h1>
+                    <!-- <h1>Winston Thomas</h1> -->
+                    <img src="./img/layout/logo-text-only.png" alt="">
                     <h6>Your trusted personal assistants</h6>
                 </div>
                 <div class="header--right">
@@ -29,6 +34,9 @@
             <div class="header--menu container-fluid">
                 <div class="header--menu-logo"></div>
                 <div class="header--menu-wrapper">
+                    <div class="header--menu-close">
+                        <i class="fal fa-times"></i>
+                    </div>
                     <ul class="header--menu-primary">
                         <li class="header--menu-item is-active"><a href="#">Homepage</a></li>
                         <li class="header--menu-item"><a href="#">Membership</a></li>
@@ -36,6 +44,25 @@
                         <li class="header--menu-item"><a href="#">Winston's Choice</a></li>
                         <li class="header--menu-item"><a href="#">Private Club</a></li>
                     </ul>
+                    <div class="header--menu-mobile-footer">
+                        <ul class="header--menu-mobile-footer-social">
+                            <li class="header--menu-mobile-footer-social-item">
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            </li>
+                            <li class="header--menu-mobile-footer-social-item">
+                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                            </li>
+                            <li class="header--menu-mobile-footer-social-item">
+                                <a href="#"><i class="fab fa-youtube-square"></i></a>
+                            </li>
+                            <li class="header--menu-mobile-footer-social-item">
+                                <a href="#"><i class="fab fa-google-plus-square"></i></a>
+                            </li>
+                        </ul>
+                        <div class="header--menu-mobile-footer-copyright">
+                            &copy; 2019 Winston Thomas. All rights reserved.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -159,7 +186,7 @@
     </section>
 
     <section id="private-club">
-        <div class="row">
+        <div class="container row">
             <div class="col-md-7 private-club--left">
                 <div class="content-top">
                     <div class="section-title gold left">
@@ -183,7 +210,7 @@
                 </div>
             </div>
             <div class="col-md-5 private-club--right">
-                <img src="./img/private-club.jpg" alt="">
+                <img src="./img/private-club-01.jpg" alt="">
             </div>
         </div>
     </section>
@@ -249,6 +276,7 @@
 
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.flickity.js"></script>
+    <script src="/js/jquery.flickity.fade.js"></script>
     <script src="/js/app.js"></script>
 
 </body>

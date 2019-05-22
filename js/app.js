@@ -49,7 +49,8 @@ $(document).ready(function () {
 function debounce(func, wait = 10, immediate = true) {
     let timeout;
     return function () {
-        let context = this, args = arguments;
+        let context = this,
+            args = arguments;
         let later = function () {
             timeout = null;
             if (!immediate) func.apply(context, args);
@@ -106,6 +107,19 @@ window.setTimeout(function () {
         contain: true,
         wrapAround: true,
         autoPlay: 3000,
-        prevNextButtons: false
+        prevNextButtons: false,
+        // fade: true
     });
 }, 200);
+
+$('.header--menu-toggle').click(function () {
+    $('.header--menu-wrapper').addClass('is-active');
+    $('html').css('overflow', 'hidden');
+    $('body').css('overflow', 'hidden');
+});
+
+$('.header--menu-close').click(function () {
+    $('.header--menu-wrapper').removeClass('is-active');
+    $('html').css('overflow', 'auto');
+    $('body').css('overflow', 'auto');
+});
