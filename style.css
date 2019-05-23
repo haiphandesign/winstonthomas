@@ -1843,7 +1843,7 @@ h6 {
 
 @media (min-width: 992px) {
   .private-club--left {
-    height: 50vh;
+    height: 50rem;
     text-align: left;
   }
 }
@@ -1969,6 +1969,20 @@ h6 {
   content: '"';
 }
 
+#membership {
+  padding-bottom: 0 !important;
+}
+
+.membership--item {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+  .membership--item {
+    margin-bottom: 2rem;
+  }
+}
+
 .membership--item-image img {
   display: block;
   width: 70%;
@@ -1981,7 +1995,7 @@ h6 {
   width: 100%;
   height: 3rem;
   margin: 0 auto;
-  margin-top: -1.5rem;
+  margin-top: -1.55rem;
   background-image: url("./img/layout/shadow.png");
   background-size: contain;
   background-position: center;
@@ -1992,7 +2006,7 @@ h6 {
   text-align: center;
 }
 
-.membership--item-info h3 {
+.membership--item-info h2 {
   margin: 1rem 0 2rem;
 }
 
@@ -2035,6 +2049,7 @@ h6 {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  margin-left: -1rem;
 }
 
 .membership--item-fee span {
@@ -2042,6 +2057,49 @@ h6 {
   font-size: .85rem;
   margin-right: .5rem;
   vertical-align: super;
+}
+
+@media (min-width: 992px) {
+  .membership--item.master {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 7.5rem;
+    margin-bottom: 5rem;
+  }
+  .membership--item.master .membership--item-image img {
+    max-width: 40rem;
+    width: 100%;
+  }
+  .membership--item.master > div:nth-child(2) {
+    margin-left: 5rem;
+  }
+}
+
+.membership--item.master .membership--item-fee {
+  text-transform: uppercase;
+  margin-left: 0;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.membership--item-apply {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.membership--item-apply a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .85rem;
+  border-bottom: .2rem solid currentColor;
+  padding-bottom: .3rem;
 }
 
 #mailling-list {

@@ -172,3 +172,7 @@ var typed = new Typed('.hero--carousel-typed', {
         heroCarousel.flickity('next');
     },
 });
+
+ScrollReveal().reveal('.reveal', {
+    reset: true,
+});

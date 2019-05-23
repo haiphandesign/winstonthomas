@@ -399,7 +399,7 @@
     padding: 0;
 
     @include breakpoint(md) {
-        height: 50vh;
+        height: 50rem;
         text-align: left;
         // padding: 0 5vw;
     }
@@ -516,8 +516,17 @@
     }
 }
 
-// #membership {
-// }
+#membership {
+    padding-bottom: 0 !important;
+}
+
+.membership--item {
+    margin-bottom: 4rem;
+
+    @include breakpoint(md) {
+        margin-bottom: 2rem;
+    }
+}
 
 .membership--item-image {
     img {
@@ -534,7 +543,7 @@
         height: 3rem;
 
         margin: 0 auto;
-        margin-top: -1.5rem;
+        margin-top: -1.55rem;
 
         background-image: url('./img/layout/shadow.png');
         background-size: contain;
@@ -546,7 +555,7 @@
 .membership--item-info {
     text-align: center;
 
-    h3 {
+    h2 {
         // text-transform: uppercase;
         // font-family: $font-sans;
         // font-weight: bold;
@@ -599,12 +608,62 @@
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
+    margin-left: -1rem;
 
     span {
         color: $color-text-light;
         font-size: .85rem;
         margin-right: .5rem;
         vertical-align: super;
+    }
+}
+
+.membership--item {
+    &.master {
+        @include breakpoint(md) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 7.5rem;
+            margin-bottom: 5rem;
+
+            .membership--item-image {
+                img {
+                    max-width: 40rem;
+                    width: 100%;
+                }
+
+            }
+
+            >div:nth-child(2) {
+                margin-left: 5rem;
+            }
+        }
+
+        .membership--item-fee {
+            text-transform: uppercase;
+            margin-left: 0;
+            margin-top: 2rem;
+            font-size: 1rem;
+
+        }
+    }
+}
+
+.membership--item-apply {
+    text-align: center;
+
+    margin: 1rem auto;
+
+    a {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: .85rem;
+
+        border-bottom: .2rem solid currentColor;
+
+        padding-bottom: .3rem;
     }
 }
 
