@@ -653,13 +653,14 @@
 
 .membership--item-apply {
     text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .85rem;
 
     margin: 1rem auto;
+    padding-bottom: .3rem;
 
     a {
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: .85rem;
 
         border-bottom: .2rem solid currentColor;
 

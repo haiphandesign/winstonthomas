@@ -2091,13 +2091,14 @@ h6 {
 
 .membership--item-apply {
   text-align: center;
-  margin: 1rem auto;
-}
-
-.membership--item-apply a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: .85rem;
+  margin: 1rem auto;
+  padding-bottom: .3rem;
+}
+
+.membership--item-apply a {
   border-bottom: .2rem solid currentColor;
   padding-bottom: .3rem;
 }

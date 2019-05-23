@@ -110,7 +110,7 @@ window.setTimeout(function () {
         autoPlay: false,
         pauseAutoPlayOnHover: false,
         prevNextButtons: false,
-        pageDots: false,
+        // pageDots: false,
         // fade: true,
     });
 }, 200);
