@@ -5,7 +5,7 @@
     height: 100vh;
     // max-height: 60rem;
 
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
     padding: 0 !important;
 
     // background-color: $ui-border-color;
@@ -24,6 +24,11 @@
         right: 0;
         bottom: -1.5rem;
         margin: 0 auto;
+    }
+
+    .flickity-slider {
+        -webkit-transform: none !important;
+        transform: none !important;
     }
 
     .flickity-button {
@@ -58,11 +63,32 @@
     height: 100%;
 
     color: white;
+    text-align: center;
+    text-shadow: 0 0 50px $color-text-regular;
 
-    background: rgba(black, 0.25);
+    // background: rgba(black, 0.25);
+    background-image: linear-gradient(to bottom, rgba(black, 0) 0%, rgba(black, 0.5) 100%);
 
-    pointer-events: none;
+    // pointer-events: none;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        width: 80%;
+        max-width: 75rem;
+
+        @include breakpoint(md) {
+            font-size: 5rem;
+        }
+    }
+
+    .hero--carousel-typed {
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        font-weight: bold;
+    }
 }
+
 
 .hero--carousel-item {
     display: flex;
@@ -72,12 +98,27 @@
     width: 100%;
     // background: red;
 
+    left: 0 !important;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+
     img {
         width: 100%;
         object-fit: cover;
     }
+
+    &.is-selected {
+        opacity: 1;
+        z-index: 0
+    }
 }
 
+.typed-cursor {
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+}
 
 #intro {
     padding: 7.5rem 0;
@@ -98,7 +139,7 @@
     p {
         font-size: .85rem;
         text-transform: lowercase;
-        font-style: italic;
+        // font-style: italic;
         color: $color-text-light;
 
         margin: 2rem 0;
@@ -132,6 +173,14 @@
 
     &+.intro--menu-link {
         margin-left: 2rem;
+    }
+}
+
+#winstons-choice {
+    padding-bottom: 8rem !important;
+
+    @include breakpoint(md) {
+        padding-bottom: 5rem !important;
     }
 }
 
@@ -296,6 +345,25 @@
     }
 }
 
+.blog--page-link {
+    width: 100%;
+    margin-bottom: -3rem;
+    padding-top: 1rem;
+    text-align: center;
+
+    a {
+        margin-top: 1.5rem;
+    }
+
+    @include breakpoint(md) {
+        text-align: right;
+
+        a {
+            margin-top: unset;
+        }
+    }
+}
+
 
 #private-club {
     position: relative;
@@ -398,8 +466,6 @@
 }
 
 #enquiry {
-    padding: 5rem 0;
-
     .container {
         text-align: center;
 
@@ -415,6 +481,41 @@
         }
     }
 }
+
+#testimonial {
+    padding-top: 0 !important;
+    text-align: center;
+}
+
+.testimonial--carousel {
+    width: 100%;
+    margin: 0 auto;
+
+    .flickity-slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.testimonial--carousel-item {
+    width: 100%;
+    text-align: center;
+
+    h2 {
+        width: 45rem;
+        margin: 0 auto;
+
+        &:before {
+            content: '"';
+        }
+
+        &:after {
+            content: '"';
+        }
+    }
+}
+
 
 #mailling-list {
     display: flex;

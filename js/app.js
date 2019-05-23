@@ -99,18 +99,44 @@ window.setTimeout(headerspacing, 100);
 
 
 
+heroCarousel = $('.hero--carousel');
 
 window.setTimeout(function () {
-    $('.hero--carousel').flickity({
+    heroCarousel.flickity({
         cellSelector: '.hero--carousel-item',
         cellAlign: 'left',
         contain: true,
         wrapAround: true,
-        autoPlay: 3000,
+        autoPlay: false,
+        pauseAutoPlayOnHover: false,
         prevNextButtons: false,
+        pageDots: false,
+        // fade: true,
+    });
+}, 200);
+
+heroCarousel.mouseleave(function () {
+    heroCarousel.flickity('playPlayer');
+})
+
+testimonialCarousel = $('.testimonial--carousel');
+
+window.setTimeout(function () {
+    testimonialCarousel.flickity({
+        cellSelector: '.testimonial--carousel-item',
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        autoPlay: 5000,
+        // prevNextButtons: false,
+        // pageDots: false,
         // fade: true
     });
 }, 200);
+
+// heroCarousel.mouseleave(function () {
+//     testimonialCarousel.flickity('playPlayer');
+// })
 
 $('.header--menu-toggle').click(function () {
     $('.header--menu-wrapper').addClass('is-active');
@@ -122,4 +148,27 @@ $('.header--menu-close').click(function () {
     $('.header--menu-wrapper').removeClass('is-active');
     $('html').css('overflow', 'auto');
     $('body').css('overflow', 'auto');
+});
+
+var typed = new Typed('.hero--carousel-typed', {
+    strings: [
+        "A Last minute get away? ^1000",
+        "Or last second pick up? ^1000",
+        "Breakfast for two? ^1000",
+        "Or dinner for 200? ^1000",
+        "Need a rare cigar? ^1000",
+        "A tune up for your watch? ^1000",
+        "Or your boat? ^1000",
+        "Need a place in London? ^1000",
+        "or Beijing? ^1000",
+        "or San Francisco? ^1000",
+        "or that last minute tee time? ^1000",
+    ],
+    typeSpeed: 70,
+    backSpeed: 50,
+    startDelay: 4000,
+    loop: true,
+    preStringTyped: (arrayPos, self) => {
+        heroCarousel.flickity('next');
+    },
 });

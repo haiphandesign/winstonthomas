@@ -27,37 +27,37 @@ $color-background: #fafafa;
 $ui-border-color: #dadada;
 $ui-border-width: 1px;
 
+$font-serif: 'Prata',
+serif;
+
+
 
 // Typography
 
 $h1-size: 3rem;
 $h1-weight: normal;
-$h1-font: 'Bodoni',
-serif;
+$h1-font: $font-serif;
 $h1-spacing: 0;
 $h1-transform: none;
 $h1-lineheight: 1.5;
 
 $h2-size: 2rem;
 $h2-weight: normal;
-$h2-font: 'Bodoni',
-serif;
+$h2-font: $font-serif;
 $h2-spacing: 0;
 $h2-transform: none;
 $h2-lineheight: 1.5;
 
 $h3-size: 1.5rem;
 $h3-weight: normal;
-$h3-font: 'Bodoni',
-serif;
+$h3-font: $font-serif;
 $h3-spacing: 0;
 $h3-transform: none;
 $h3-lineheight: 1.5;
 
 $h4-size: 1.25rem;
 $h4-weight: normal;
-$h4-font: 'Bodoni',
-serif;
+$h4-font: $font-serif;
 $h4-spacing: 0;
 $h4-transform: none;
 $h4-lineheight: 1.5;

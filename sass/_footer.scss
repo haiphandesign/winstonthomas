@@ -76,3 +76,22 @@
         margin: 0;
     }
 }
+
+.footer--extra {
+    opacity: .25;
+
+    max-width: 40rem;
+
+    font-size: .85rem;
+    text-align: center;
+    hyphens: auto;
+
+    margin: 1.5rem 0 0;
+    padding: 0 1rem;
+
+    transition: all .5s;
+
+    &:hover {
+        opacity: .75;
+    }
+}

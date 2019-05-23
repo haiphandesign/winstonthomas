@@ -17,10 +17,10 @@
   */
 @import url("addons/jquery.modal.css");
 @import url("addons/jquery.flickity.css");
-@import url("addons/jquery.flickity.fade.css");
 @import url("addons/fontawesome/all.css");
 @import url("addons/bootstrap-grid.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap&subset=vietnamese");
+@import url("https://fonts.googleapis.com/css?family=Prata&display=swap&subset=vietnamese");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -588,31 +588,75 @@ input::placeholder {
   border-color: #d2bc8f;
 }
 
+.small-text {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.link.line-right {
+  margin-right: -2.5rem;
+}
+
+.link.line-right:after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 5rem;
+  margin-bottom: 0.25em;
+  margin-left: 0.5em;
+  background-image: -webkit-gradient(linear, left top, right top, from(currentColor), to(transparent));
+  background-image: linear-gradient(to right, currentColor, transparent);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.link.line-right:hover:after {
+  width: 10rem;
+}
+
 .divider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: .35rem;
-  border: 1px solid #dadada;
-  border-left: 0;
-  border-right: 0;
-  margin: 1.5rem auto 3rem;
+  position: relative;
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  height: 1px;
+  width: 20rem;
+  --color-divider: #b3b3b3;
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(var(--color-divider)), to(transparent));
+  background-image: linear-gradient(to right, transparent, var(--color-divider), transparent);
+  background-repeat: no-repeat;
 }
 
 .divider.small {
-  width: 3.5rem;
+  width: 10rem;
 }
 
 .divider.gold {
-  border-color: #d2bc8f;
-  opacity: .25;
+  --color-divider: #d2bc8f;
+}
+
+@media (min-width: 992px) {
+  .divider.left {
+    width: 10rem;
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-divider)), to(transparent));
+    background-image: linear-gradient(to right, var(--color-divider), transparent);
+  }
+}
+
+.divider.arrow-up:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -3.25px;
+  left: calc(50% - 7px);
+  width: 6.5px;
+  height: 6.5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: white;
+  border-top: 1px solid var(--color-divider);
+  border-left: 1px solid var(--color-divider);
 }
 
 .section-title {
@@ -633,7 +677,7 @@ input::placeholder {
 }
 
 .section-title h5 {
-  margin: 0;
+  margin: .5rem 0 0;
 }
 
 @media (min-width: 992px) {
@@ -657,9 +701,51 @@ input::placeholder {
   color: #d2bc8f;
 }
 
-.section-title.gold .divider {
-  border-color: #d2bc8f;
-  opacity: .5;
+.flickity-page-dots {
+  max-width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 5rem;
+  height: .2rem;
+  margin: 0;
+  background: #292929;
+  border-radius: 0;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.flickity-button {
+  z-index: 5;
+}
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+}
+
+/* arrow color */
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+
+.flickity-prev-next-button:hover {
+  background: transparent;
 }
 
 * + h1,
@@ -707,7 +793,7 @@ p + *,
 h1 {
   font-size: 3rem;
   font-weight: normal;
-  font-family: "Bodoni", serif;
+  font-family: "Prata", serif;
   text-transform: none;
   line-height: 1.5;
 }
@@ -715,7 +801,7 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: normal;
-  font-family: "Bodoni", serif;
+  font-family: "Prata", serif;
   text-transform: none;
   line-height: 1.5;
   -webkit-text-stroke-width: 0.2px;
@@ -724,7 +810,7 @@ h2 {
 h3 {
   font-size: 1.5rem;
   font-weight: normal;
-  font-family: "Bodoni", serif;
+  font-family: "Prata", serif;
   text-transform: none;
   line-height: 1.5;
   -webkit-text-stroke-width: 0.2px;
@@ -733,7 +819,7 @@ h3 {
 h4 {
   font-size: 1.25rem;
   font-weight: normal;
-  font-family: "Bodoni", serif;
+  font-family: "Prata", serif;
   text-transform: none;
   line-height: 1.5;
   -webkit-text-stroke-width: 0.2px;
@@ -1280,11 +1366,28 @@ h6 {
   }
 }
 
+.footer--extra {
+  opacity: .25;
+  max-width: 40rem;
+  font-size: .85rem;
+  text-align: center;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  margin: 1.5rem 0 0;
+  padding: 0 1rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.footer--extra:hover {
+  opacity: .75;
+}
+
 #hero {
   display: block;
   width: 100%;
   height: 100vh;
-  margin-bottom: 3rem;
   padding: 0 !important;
 }
 
@@ -1303,6 +1406,11 @@ h6 {
   right: 0;
   bottom: -1.5rem;
   margin: 0 auto;
+}
+
+.hero--carousel .flickity-slider {
+  -webkit-transform: none !important;
+  transform: none !important;
 }
 
 .hero--carousel .flickity-button {
@@ -1341,8 +1449,29 @@ h6 {
   width: 100%;
   height: 100%;
   color: white;
-  background: rgba(0, 0, 0, 0.25);
-  pointer-events: none;
+  text-align: center;
+  text-shadow: 0 0 50px #292929;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.hero--carousel-overlay h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  width: 80%;
+  max-width: 75rem;
+}
+
+@media (min-width: 992px) {
+  .hero--carousel-overlay h1 {
+    font-size: 5rem;
+  }
+}
+
+.hero--carousel-overlay .hero--carousel-typed {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-weight: bold;
 }
 
 .hero--carousel-item {
@@ -1356,12 +1485,28 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  left: 0 !important;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
 }
 
 .hero--carousel-item img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.hero--carousel-item.is-selected {
+  opacity: 1;
+  z-index: 0;
+}
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+          animation: typedjsBlink 0.7s infinite;
 }
 
 #intro {
@@ -1392,7 +1537,6 @@ h6 {
 #intro p {
   font-size: .85rem;
   text-transform: lowercase;
-  font-style: italic;
   color: #888888;
   margin: 2rem 0;
 }
@@ -1427,6 +1571,16 @@ h6 {
 
 .intro--menu-link + .intro--menu-link {
   margin-left: 2rem;
+}
+
+#winstons-choice {
+  padding-bottom: 8rem !important;
+}
+
+@media (min-width: 992px) {
+  #winstons-choice {
+    padding-bottom: 5rem !important;
+  }
 }
 
 .blog--wrapper {
@@ -1633,6 +1787,26 @@ h6 {
   }
 }
 
+.blog--page-link {
+  width: 100%;
+  margin-bottom: -3rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.blog--page-link a {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .blog--page-link {
+    text-align: right;
+  }
+  .blog--page-link a {
+    margin-top: unset;
+  }
+}
+
 #private-club {
   position: relative;
   width: 100%;
@@ -1742,10 +1916,6 @@ h6 {
   }
 }
 
-#enquiry {
-  padding: 5rem 0;
-}
-
 #enquiry .container {
   text-align: center;
 }
@@ -1757,6 +1927,46 @@ h6 {
 
 #enquiry .container a:hover {
   color: #d2bc8f;
+}
+
+#testimonial {
+  padding-top: 0 !important;
+  text-align: center;
+}
+
+.testimonial--carousel {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.testimonial--carousel .flickity-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testimonial--carousel-item {
+  width: 100%;
+  text-align: center;
+}
+
+.testimonial--carousel-item h2 {
+  width: 45rem;
+  margin: 0 auto;
+}
+
+.testimonial--carousel-item h2:before {
+  content: '"';
+}
+
+.testimonial--carousel-item h2:after {
+  content: '"';
 }
 
 #mailling-list {
