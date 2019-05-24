@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="peter">
+<body class="peter logged-out">
     <!-- <div class="header--sub container-fluid">
         <a href="#">Schedule your totally free consultant call!</a>
         <div class="header--sub-close">x</div>
@@ -28,7 +28,13 @@
                     <h6>Your trusted personal assistants</h6>
                 </div>
                 <div class="header--right">
-                    <i class="fal fa-user"></i>
+                    <div class="logged-in">
+                        <i class="fal fa-user"></i>s
+                    </div>
+                    <div class="logged-out">
+                        <a href="#" class="button solid medium"><i class="far fa-key-skeleton fa-rotate-180"></i>Sign
+                            In</a>
+                    </div>
                 </div>
             </div>
             <div class="header--menu container-fluid">
@@ -39,7 +45,7 @@
                     </div>
                     <ul class="header--menu-primary">
                         <li class="header--menu-item is-active"><a href="#">Homepage</a></li>
-                        <li class="header--menu-item"><a href="#">Membership</a></li>
+                        <li class="header--menu-item"><a href="#">Memberships</a></li>
                         <li class="header--menu-item"><a href="#">Services</a></li>
                         <li class="header--menu-item"><a href="#">Winston's Choice</a></li>
                         <li class="header--menu-item"><a href="#">Private Club</a></li>
@@ -129,7 +135,7 @@
                 <div class="hero--carousel-content">
                     <h1>or Beijing?</h1>
                 </div>
-                <img src="./img/at-your-service/11.jpg" alt="">
+                <img src="./img/at-your-service/10.jpg" alt="">
             </div>
             <div class="hero--carousel-item">
                 <div class="hero--carousel-content">
@@ -143,26 +149,39 @@
                 </div>
                 <img src="./img/at-your-service/12.jpg" alt="">
             </div>
+            <div class="hero--carousel-item">
+                <div class="hero--carousel-content">
+                    <h1>Winston Thomas<br>At Your Service</h1>
+                </div>
+                <img src="./img/at-your-service/13.jpg" alt="" style="object-position: top;">
+            </div>
         </div>
     </section>
 
     <section id="intro">
         <div class="container">
             <div class="section-title reveal">
-                <h5>About Winston Thomas</h5>
+                <h5>Who we are</h5>
                 <span class="divider small"></span>
             </div>
-            <h2 class="reveal">Our services gives you option to better utilize your everyday schedule. We are your very
-                own Personal
-                Assistants. Our goal is to enhance your dynamic lifestyle and connect you to the finest things life has
-                to offer. We are at your service every minute of the day, because every moment is precious.</h2>
-            <img src="./img/signature.png" alt="Winston Thomas" class="signature reveal">
-            <p>more in</p>
+            <h2>Time for our loved ones, time to pursue our passions, time to indulge our senses. It is the most
+                valuable commodity we all have in common. Winston Thomas was founded upon a single vision: To give you
+                more time to do the things that truly matter.</h2>
+            <h2 class="reveal">Our services give you options to better utilize your everyday schedule. We are your very
+                own Personal Assistants. Our goal is to enhance your dynamic lifestyle and connect you to the finest
+                things life has to offer. We are at your service every minute of the day, because every moment is
+                precious.</h2>
+            <img src="./img/signature-peter.png" alt="Winston Thomas" class="signature reveal">
+            <p>&nbsp;</p>
             <ul class="intro--menu">
+                <li class="intro--menu-link"><a href="#">Become A Member</a></li>
+            </ul>
+            <!-- <p>more in</p> -->
+            <!-- <ul class="intro--menu">
                 <li class="intro--menu-link"><a href="#">About Us</a></li>
                 <li class="intro--menu-link"><a href="#">Our Services</a></li>
-                <li class="intro--menu-link"><a href="#">Membership</a></li>
-            </ul>
+                <li class="intro--menu-link"><a href="#">Memberships</a></li>
+            </ul> -->
         </div>
     </section>
 
@@ -172,6 +191,128 @@
                 <h1>Our Services</h1>
                 <h5>Leading concierge<br>& Life-style management services</h5>
                 <span class="divider small"></span>
+            </div>
+
+            <div class="services--wrapper">
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/travel.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Travel</h1>
+                        <span class="divider small"></span>
+                        <p>Gubergren consetetur est justo duo aliquyam sit. Ipsum ipsum ea ipsum vero elitr accusam.
+                            Magna dolor justo diam ut dolores,.</p>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/celebrations.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Celebrations</h1>
+                        <span class="divider small"></span>
+                        <p>Gubergren consetetur est justo duo aliquyam sit. Ipsum ipsum ea ipsum vero elitr accusam.
+                            Magna dolor justo diam ut dolores,.</p>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/tailored-experiences.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Tailored Experiences</h1>
+                        <span class="divider small"></span>
+                        <p>Gubergren consetetur est justo duo aliquyam sit. Ipsum ipsum ea ipsum vero elitr accusam.
+                            Magna dolor justo diam ut dolores,.</p>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/wealth-management.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Wealth Management</h1>
+                        <span class="divider small"></span>
+                        <p>Gubergren consetetur est justo duo aliquyam sit. Ipsum ipsum ea ipsum vero elitr accusam.
+                            Magna dolor justo diam ut dolores,.</p>
+                    </div>
+                </div>
+                <!-- <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/05.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Celebrations</h1>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/06.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Education</h1>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/07.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Rare Cigars, Wine and Whiskey</h1>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/08.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Health</h1>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/09.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Wealth Management</h1>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/10.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Real Estate</h1>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/11.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Gifts</h1>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/12.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Art & Auctions</h1>
+                    </div>
+                </div>
+                <div class="services--item">
+                    <div class="services--item-image">
+                        <img src="./img/services/12.jpg" alt="">
+                    </div>
+                    <div class="services--item-info">
+                        <h1>Personal Shhopping</h1>
+                    </div>
+                </div> -->
+            </div>
+            <div class="services--more">
+                <a href="#" class="small-text link underline">More Services</a>
             </div>
         </div>
     </section>
@@ -205,28 +346,63 @@
     <section id="membership">
         <div class="container">
             <div class="section-title">
-                <h1>Membership</h1>
-                <h5>Your Trusted<br>Personal Assistants</h5>
+                <h1>Memberships</h1>
+                <h5>Private & Exclusive</h5>
                 <span class="divider small"></span>
+                <!-- <p>Our Memberships give you options to better utilize your everyday schedule and network with other like
+                    minded individuals. We are your very own Concierge and Personal Assistant. Our goal is to enhance
+                    your dynamic lifestyle. We are at your service every minute of the day, because every moment is
+                    precious.</p> -->
             </div>
             <div class="row">
                 <div class="col-md-3">
-                    <div class="membership--item">
+                    <div class="membership--item master-key">
                         <div class="membership--item-image">
-                            <img src="./img/membership/card-sapphire.png" alt="">
+                            <img src="./img/membership/card-master.png" alt="">
                         </div>
                         <div>
                             <div class="membership--item-info">
-                                <h2>Sapphire Key</h2>
+                                <h2>Master Key</h2>
                                 <ul>
-                                    <li>$25 Request Fee</li>
-                                    <li>Sapphire Monthly Care Package</li>
-                                    <li class="is-disabled">Upgrade Program</li>
-                                    <li class="is-disabled">Private Club Access</li>
+                                    <li>World wide Service</li>
+                                    <li>12 Months</li>
+                                    <li>No Request Fee</li>
+                                    <li>Master<br>Monthly Care Package</li>
+                                    <li>-</li>
+                                    <li>Private Club Access</li>
+                                    <li>Bi-yearly<br>Networking Event</li>
+                                    <li>Invivation<br>Only</li>
+                                </ul>
+                            </div>
+                            <!-- <div class="membership--item-fee">
+                                        <span>$</span>10,000
+                                    </div> -->
+                            <!-- <div class="membership--item-apply">
+                                Invitation<br>Only
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="membership--item">
+                        <div class="membership--item-image">
+                            <img src="./img/membership/card-diamond.png" alt="">
+                        </div>
+                        <div>
+                            <div class="membership--item-info">
+                                <h2>Diamond Key</h2>
+                                <ul>
+                                    <li>Regional Service</li>
+                                    <li>12 Months</li>
+                                    <li>No Request Fee</li>
+                                    <li>Diamond<br>Monthly Care Package</li>
+                                    <li>Upgrade Program</li>
+                                    <li>Private Club Access</li>
+                                    <li>Bi-yearly<br>Networking Event</li>
                                 </ul>
                             </div>
                             <div class="membership--item-fee">
-                                <span>$</span>2,500
+                                <span>$</span>10,000
                             </div>
                             <div class="membership--item-apply">
                                 <a href="#">Apply</a>
@@ -243,14 +419,17 @@
                             <div class="membership--item-info">
                                 <h2>Ruby Key</h2>
                                 <ul>
+                                    <li>Regional Service</li>
+                                    <li>12 Months</li>
                                     <li>$25 Request Fee</li>
-                                    <li>Ruby Monthly Care Package</li>
+                                    <li>Ruby<br>Monthly Care Package</li>
                                     <li>Upgrade Program</li>
                                     <li class="is-disabled">Private Club Access</li>
+                                    <li class="is-disabled">Bi-yearly<br>Networking Event</li>
                                 </ul>
                             </div>
                             <div class="membership--item-fee">
-                                <span>$</span>5,000
+                                <span>$</span>7,500
                             </div>
                             <div class="membership--item-apply">
                                 <a href="#">Apply</a>
@@ -261,47 +440,26 @@
                 <div class="col-md-3">
                     <div class="membership--item">
                         <div class="membership--item-image">
-                            <img src="./img/membership/card-diamond.png" alt="">
+                            <img src="./img/membership/card-sapphire.png" alt="">
                         </div>
                         <div>
                             <div class="membership--item-info">
-                                <h2>Diamond Key</h2>
+                                <h2>Sapphire Key</h2>
                                 <ul>
-                                    <li>No Request Fee</li>
-                                    <li>Diamond Monthly Care Package</li>
-                                    <li>Upgrade Program</li>
-                                    <li>Private Club Access</li>
+                                    <li>Regional Service</li>
+                                    <li>6 Months</li>
+                                    <li>$25 Request Fee</li>
+                                    <li>Sapphire<br>Monthly Care Package</li>
+                                    <li class="is-disabled">Upgrade Program</li>
+                                    <li class="is-disabled">Private Club Access</li>
+                                    <li class="is-disabled">Bi-yearly<br>Networking Event</li>
                                 </ul>
                             </div>
                             <div class="membership--item-fee">
-                                <span>$</span>10,000
+                                <span>$</span>4,500
                             </div>
                             <div class="membership--item-apply">
                                 <a href="#">Apply</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="membership--item">
-                        <div class="membership--item-image">
-                            <img src="./img/membership/card-master.png" alt="">
-                        </div>
-                        <div>
-                            <div class="membership--item-info">
-                                <h2>Master Key</h2>
-                                <ul>
-                                    <li>No Request Fee</li>
-                                    <li>Master Monthly Care Package</li>
-                                    <li>World Wide Service</li>
-                                    <li>Private Club Access</li>
-                                </ul>
-                            </div>
-                            <!-- <div class="membership--item-fee">
-                                <span>$</span>10,000
-                            </div> -->
-                            <div class="membership--item-apply">
-                                <br><br>Invitation<br>Only
                             </div>
                         </div>
                     </div>
@@ -406,36 +564,54 @@
                     <h5>Coming Soon</h5>
                 </div>
             </div>
-            <div class="private-club-peter--carousel-item"></div>
-            <div class="private-club-peter--carousel-item"></div>
-            <div class="private-club-peter--carousel-item"></div>
-            <div class="private-club-peter--carousel-item"></div>
-            <div class="private-club-peter--carousel-item"></div>
-            <div class="private-club-peter--carousel-item"></div>
-            <div class="private-club-peter--carousel-item"></div>
-            <div class="private-club-peter--carousel-item"></div>
-            <div class="private-club-peter--carousel-item"></div>
-            <div class="private-club-peter--carousel-item"></div>
+            <div class="private-club-peter--carousel-item">
+                <img src="./img/private-club/01.jpg" alt="">
+            </div>
+            <div class="private-club-peter--carousel-item">
+                <img src="./img/private-club/02.jpg" alt="">
+            </div>
+            <div class="private-club-peter--carousel-item">
+                <img src="./img/private-club/03.jpg" alt="">
+            </div>
+            <div class="private-club-peter--carousel-item">
+                <img src="./img/private-club/04.jpg" alt="">
+            </div>
+            <div class="private-club-peter--carousel-item">
+                <img src="./img/private-club/05.jpg" alt="">
+            </div>
+            <div class="private-club-peter--carousel-item">
+                <img src="./img/private-club/06.jpg" alt="">
+            </div>
+            <div class="private-club-peter--carousel-item">
+                <img src="./img/private-club/07.jpg" alt="">
+            </div>
+            <div class="private-club-peter--carousel-item">
+                <img src="./img/private-club/08.jpg" alt="">
+            </div>
+            <div class="private-club-peter--carousel-item">
+                <img src="./img/private-club/09.jpg" alt="">
+            </div>
+            <div class="private-club-peter--carousel-item">
+                <img src="./img/private-club/10.jpg" alt="">
+            </div>
         </div>
     </section>
 
     <section id="enquiry">
         <div class="container">
-            <h5>Enjoy what you see?</h5>
-            <a href="#" class="link underline">
-                <h2>Enquire Membership</h2>
+            <h5>Winston Thomas<br>At Your Service</h5>
+            <a href="#">
+                <h2>Become a Member</h2>
             </a>
             <span class="divider small"></span>
-            <a href="#" class="link underline">
-                <h5>Or schedule your<br>free consultant call</h5>
-            </a>
+            <a href="#" style="margin-top: -1rem; margin-bottom: 1rem; display: block;">
+                <h5>or<br>schedule consultation</h5>
         </div>
     </section>
 
-    <section id="mailling-list" class="container">
+    <section id="mailing-list" class="container">
         <div class="mailing-list-title">
-            <h6>Weekly precious in your box</h6>
-            <h2>JOIN THE LIST</h2>
+            <h2>BE ON THE LIST</h2>
         </div>
         <div class="mailing-list-form">
             <input type="text" placeholder="Your Name">
@@ -448,28 +624,27 @@
         <div class="footer--outer">
             <div class="footer--sub"></div>
             <div class="footer--main">
+                <ul class="footer--social">
+                    <li class="footer--social-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="footer--social-item">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="footer--social-item">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+                <img src="./img/winston-thomas-key-logo.svg" class="footer--logo">
                 <ul class="footer--menu">
                     <li class="footer--menu-item is-active"><a href="#">Homepage</a></li>
-                    <li class="footer--menu-item"><a href="#">Membership</a></li>
+                    <li class="footer--menu-item"><a href="#">Memberships</a></li>
                     <li class="footer--menu-item"><a href="#">Services</a></li>
                     <li class="footer--menu-item"><a href="#">Winston's Choice</a></li>
                     <li class="footer--menu-item"><a href="#">Private Club</a></li>
+                    <li class="footer--menu-item"><a href="#">FAQ</a></li>
                 </ul>
             </div>
-            <ul class="footer--social">
-                <li class="footer--social-item">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                </li>
-                <li class="footer--social-item">
-                    <a href="#"><i class="fab fa-twitter-square"></i></a>
-                </li>
-                <li class="footer--social-item">
-                    <a href="#"><i class="fab fa-youtube-square"></i></a>
-                </li>
-                <li class="footer--social-item">
-                    <a href="#"><i class="fab fa-google-plus-square"></i></a>
-                </li>
-            </ul>
             <div class="footer--copyright">
                 &copy; 2019 Winston Thomas. All rights reserved.
             </div>

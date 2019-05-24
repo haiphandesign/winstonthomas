@@ -402,7 +402,7 @@
 
     .content-top {
         h1 {
-            color: $color-accent-secondary;
+            color: $color-accent-primary;
         }
 
         p {
@@ -414,7 +414,7 @@
         margin-top: 2rem;
 
         h5 {
-            color: $color-accent-secondary;
+            color: $color-accent-primary;
 
             @include breakpoint(md) {
                 color: white;
@@ -426,7 +426,7 @@
 
             @include breakpoint(md) {
                 max-width: 20rem;
-                color: $color-accent-secondary;
+                color: $color-accent-primary;
             }
         }
     }
@@ -472,9 +472,85 @@
 
         a {
             &:hover {
-                color: $color-accent-secondary;
+                color: $color-accent-primary;
             }
         }
+    }
+}
+
+// #services {}
+
+.services--wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5em;
+
+    margin-top: 2rem;
+
+    @include breakpoint(md) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10rem;
+        grid-row-gap: 10rem;
+    }
+}
+
+
+.services--item {
+    position: relative;
+    width: 100%;
+
+    @include breakpoint(md) {
+        &:nth-child(2n) {
+            transform: translateY(10rem);
+        }
+    }
+}
+
+.services--item-image {
+    position: relative;
+
+    img {
+        display: block;
+
+        width: 100%;
+        height: 22.5rem;
+        object-fit: cover;
+
+        margin: 0 auto;
+
+        border-radius: .25rem;
+
+        background-color: black;
+    }
+}
+
+.services--item-info {
+    position: relative;
+    z-index: 2;
+
+    width: 80%;
+
+    border-radius: .25rem;
+    box-shadow: 0 -80px 50px rgba(0, 0, 0, .125);
+
+    text-align: center;
+
+    padding: 2rem;
+    margin: 0 auto;
+    margin-top: -5rem;
+
+    background-color: white;
+
+    .divider {
+        margin: 1.5rem auto;
+    }
+}
+
+.services--more {
+    @include breakpoint(md) {
+        text-align: center;
+        margin-top: 15rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -664,7 +740,7 @@
     }
 }
 
-#mailling-list {
+#mailing-list {
     display: flex;
     flex-direction: column;
     align-items: center;

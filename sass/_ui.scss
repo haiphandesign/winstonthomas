@@ -77,10 +77,20 @@ input {
     font-size: .85rem;
     font-weight: bold;
 
+    border-radius: .25rem;
+
+    i {
+        margin-right: .5rem;
+    }
+
     &.medium {
         height: 3rem;
-
         padding: 0 2rem;
+    }
+
+    &.solid {
+        background: $color-accent-primary;
+        color: white;
     }
 
     &.ghost {
@@ -96,12 +106,15 @@ input {
 }
 
 .small-text {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    font-weight: bold;
+    @include small-text;
 }
 
 .link {
+    &.underline {
+        border-bottom: .1rem solid currentColor;
+        padding-bottom: .3rem;
+    }
+
     &.line-right {
         margin-right: -2.5rem;
 
@@ -210,6 +223,15 @@ input {
         h6 {
             color: $color-accent-secondary;
         }
+    }
+
+    p {
+        width: 90%;
+        max-width: 50rem;
+        font-family: $font-serif;
+        font-size: 1.5rem;
+        margin-top: -2rem;
+        margin-bottom: 4rem;
     }
 }
 

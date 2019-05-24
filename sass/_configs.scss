@@ -17,7 +17,7 @@ $color-text-light: #888888;
 
 // Color
 
-$color-accent-primary: #00004d;
+$color-accent-primary: #03afff;
 $color-accent-secondary: #d2bc8f;
 $color-background: #ffffff;
 
@@ -27,7 +27,7 @@ $color-background: #ffffff;
 $ui-border-color: #dadada;
 $ui-border-width: 1px;
 
-$font-sans: 'Monserrat',
+$font-sans: 'Montserrat',
 sans-serif;
 $font-serif: 'Bodoni',
 serif;
@@ -66,16 +66,14 @@ $h4-lineheight: 1.5;
 
 $h5-size: .85rem;
 $h5-weight: bold;
-$h5-font: 'Montserrat',
-sans-serif;
+$h5-font: $font-sans;
 $h5-spacing: 0;
 $h5-transform: uppercase;
 $h5-lineheight: 1.5;
 
 $h6-size: .85rem;
 $h6-weight: bold;
-$h6-font: 'Montserrat',
-sans-serif;
+$h6-font: $font-sans;
 $h6-spacing: 0;
 $h6-transform: uppercase;
 $h6-lineheight: 1.5;

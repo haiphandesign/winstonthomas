@@ -4,7 +4,7 @@
 
     width: 100%;
 
-    box-shadow: 0 5px 20px rgba($color-text-regular, .04);
+    box-shadow: 0 5px 10px rgba($color-text-regular, .125);
 
     transition: all .25s;
 
@@ -14,8 +14,10 @@
 .header--outer {
     background-color: white;
 
-    border-bottom: $ui-border-width solid $ui-border-color;
+    // border-bottom: $ui-border-width solid $ui-border-color;
 }
+
+
 
 .header--main {
     display: flex;
@@ -23,6 +25,34 @@
     justify-content: space-between;
 
     transition: all .25s;
+
+    >* {
+        width: 100%;
+    }
+}
+
+.header--left {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include breakpoint(md) {
+        position: relative;
+
+        display: flex;
+    }
+}
+
+.header--right {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include breakpoint(md) {
+        display: flex;
+    }
 }
 
 .header--logo {
@@ -41,6 +71,8 @@
     transition: all .25s, max-height .5s;
 
     @include breakpoint(md) {
+        flex-shrink: 0;
+
         transform: scale(1);
 
         margin: 2rem 0;

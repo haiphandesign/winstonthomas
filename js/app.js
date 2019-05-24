@@ -161,15 +161,21 @@ privateclubCarousel = $('.private-club-peter--carousel');
 window.setTimeout(function () {
     privateclubCarousel.flickity({
         cellSelector: '.private-club-peter--carousel-item',
-        cellAlign: 'left',
+        cellAlign: 'center',
         contain: true,
         wrapAround: true,
-        autoPlay: 5000,
+        autoPlay: 2000,
+        pauseAutoPlayOnHover: false,
         // prevNextButtons: false,
         // pageDots: false,
         // fade: true
+        initialIndex: 2,
     });
 }, 200);
+
+privateclubCarousel.mouseleave(function () {
+    privateclubCarousel.flickity('playPlayer');
+})
 
 // heroCarousel.mouseleave(function () {
 //     testimonialCarousel.flickity('playPlayer');

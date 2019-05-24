@@ -81,3 +81,11 @@ h6 {
     text-transform: $h6-transform;
     line-height: $h6-lineheight;
 }
+
+@mixin small-text {
+    font-size: $h5-size;
+    font-weight: $h5-weight;
+    font-family: $h5-font;
+    text-transform: $h5-transform;
+    line-height: $h5-lineheight;
+}
