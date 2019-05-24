@@ -431,6 +431,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-stroke-width: 0.2px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -2387,13 +2388,13 @@ input::placeholder {
 }
 
 .peter h5 {
-  font-size: .75rem;
+  font-size: .85rem;
   font-weight: normal;
   letter-spacing: .2em;
 }
 
 .peter .small-text {
-  font-size: .75rem;
+  font-size: .85rem;
   font-weight: normal;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -2430,7 +2431,7 @@ input::placeholder {
 }
 
 .peter .header--menu-wrapper > ul .header--menu-item {
-  font-size: .75rem;
+  font-size: .85rem;
   font-weight: normal;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -2439,7 +2440,7 @@ input::placeholder {
 }
 
 .peter .footer--menu-item {
-  font-size: .75rem;
+  font-size: .85rem;
   font-weight: normal;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -2487,7 +2488,7 @@ input::placeholder {
 }
 
 .peter .intro--menu-link {
-  font-size: .75rem;
+  font-size: .85rem;
   font-weight: normal;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -2585,13 +2586,14 @@ input::placeholder {
 
 .peter #membership .membership--item-info ul li {
   color: unset;
-  font-size: .75rem;
+  font-size: .85rem;
   font-weight: normal;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: .2em;
   font-weight: bold;
+  font-size: .75rem;
 }
 
 .peter #membership .membership--item-info ul li::before {
@@ -2611,7 +2613,7 @@ input::placeholder {
 }
 
 .peter #membership .membership--item-apply {
-  font-size: .75rem;
+  font-size: .85rem;
   font-weight: normal;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;

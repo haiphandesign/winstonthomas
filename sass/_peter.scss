@@ -1,13 +1,13 @@
 .peter {
 
     h5 {
-        font-size: .75rem;
+        font-size: .85rem;
         font-weight: normal;
         letter-spacing: .2em;
     }
 
     @mixin small-text {
-        font-size: .75rem;
+        font-size: .85rem;
         font-weight: normal;
         font-family: $h5-font;
         text-transform: $h5-transform;
@@ -204,6 +204,7 @@
                     color: unset;
                     @include small-text;
                     font-weight: bold;
+                    font-size: .75rem;
 
 
                     &::before {

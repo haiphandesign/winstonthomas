@@ -46,6 +46,11 @@ $(document).ready(function () {
 });
 
 
+$('.header--menu-item a').click(function () {
+    $('.header--menu-item').removeClass('is-active');
+    $(this).parent().addClass('is-active');
+});
+
 function debounce(func, wait = 10, immediate = true) {
     let timeout;
     return function () {
