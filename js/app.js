@@ -99,7 +99,7 @@ window.setTimeout(headerspacing, 100);
 
 
 
-heroCarousel = $('.hero--carousel');
+heroCarousel = $('.hai .hero--carousel');
 
 window.setTimeout(function () {
     heroCarousel.flickity({
@@ -115,15 +115,52 @@ window.setTimeout(function () {
     });
 }, 200);
 
-heroCarousel.mouseleave(function () {
-    heroCarousel.flickity('playPlayer');
+// heroCarousel.mouseleave(function () {
+//     heroCarousel.flickity('playPlayer');
+// })
+
+heroPeterCarousel = $('.peter .hero--carousel');
+
+window.setTimeout(function () {
+    heroPeterCarousel.flickity({
+        cellSelector: '.hero--carousel-item',
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        autoPlay: false,
+        // pauseAutoPlayOnHover: false,
+        // prevNextButtons: false,
+        // pageDots: false,
+        // fade: true,
+    });
+}, 200);
+
+heroPeterCarousel.mouseleave(function () {
+    heroPeterCarousel.flickity('playPlayer');
 })
+
+
 
 testimonialCarousel = $('.testimonial--carousel');
 
 window.setTimeout(function () {
     testimonialCarousel.flickity({
         cellSelector: '.testimonial--carousel-item',
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        autoPlay: 5000,
+        // prevNextButtons: false,
+        // pageDots: false,
+        // fade: true
+    });
+}, 200);
+
+privateclubCarousel = $('.private-club-peter--carousel');
+
+window.setTimeout(function () {
+    privateclubCarousel.flickity({
+        cellSelector: '.private-club-peter--carousel-item',
         cellAlign: 'left',
         contain: true,
         wrapAround: true,
@@ -176,3 +213,8 @@ var typed = new Typed('.hero--carousel-typed', {
 ScrollReveal().reveal('.reveal', {
     reset: true,
 });
+
+setTimeout(function () {
+    $('#redirect-peter').modal();
+    return false;
+}, 100);

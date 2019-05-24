@@ -261,3 +261,30 @@ input {
 .flickity-prev-next-button:hover {
     background: transparent;
 }
+
+.modal {
+    border-radius: .5rem;
+    width: auto;
+    max-width: 90%;
+    padding: 2rem;
+    box-shadow: 0 0 50px rgba(black, .25);
+}
+
+.modal a.close-modal {
+    position: absolute;
+    top: -3.5rem;
+    right: 0;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border: 0;
+
+    background: {
+        image: url('./img/icons/close-white.svg');
+        repeat: no-repeat;
+        size: 1rem;
+        position: center;
+        color: rgba(0, 0, 0, 0);
+    }
+}

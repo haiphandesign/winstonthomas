@@ -31,10 +31,6 @@
         transform: none !important;
     }
 
-    .flickity-button {
-        z-index: 5;
-    }
-
     .dot {
         display: inline-block;
         width: 5rem;
@@ -573,7 +569,7 @@
         &:after {
             content: '';
             display: block;
-            width: 40%;
+            width: 30%;
             height: 1px;
             margin: 1rem auto;
             background-color: rgba($color-text-light, 0.125);
@@ -585,7 +581,7 @@
                 &:before {
                     content: '';
                     display: block;
-                    width: 40%;
+                    width: 30%;
                     height: 1px;
                     margin: 1rem auto;
                     background-color: rgba($color-text-light, 0.125);
@@ -667,7 +663,6 @@
         padding-bottom: .3rem;
     }
 }
-
 
 #mailling-list {
     display: flex;
