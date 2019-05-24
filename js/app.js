@@ -174,7 +174,8 @@ window.setTimeout(function () {
         // prevNextButtons: false,
         // pageDots: false,
         // fade: true
-        initialIndex: 2,
+        initialIndex: 1,
+        lazyLoad: 2
     });
 }, 200);
 
