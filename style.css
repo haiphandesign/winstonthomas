@@ -2479,6 +2479,9 @@ input::placeholder {
   margin: 0 auto;
   text-align: center;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  text-align: center;
+  padding: 5rem;
 }
 
 @media (min-width: 992px) {
