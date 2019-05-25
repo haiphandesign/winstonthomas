@@ -232,7 +232,7 @@
         .membership--item-apply {
             @include small-text;
 
-            margin-top: 8rem;
+            margin-top: 3rem;
 
             a {
                 border: .2rem solid;
@@ -243,7 +243,7 @@
 
         .master-key {
             .membership--item-apply {
-                // margin-top: 2rem;
+                margin-top: 2rem;
                 // font-size: 1.5rem;
                 font-weight: bold;
 
