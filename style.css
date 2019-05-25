@@ -2478,7 +2478,7 @@ input::placeholder {
   max-width: 75rem;
   margin: 0 auto;
   text-align: center;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
 }
 
 @media (min-width: 992px) {
@@ -2605,6 +2605,7 @@ input::placeholder {
 }
 
 .peter #membership .membership--item-fee {
+  display: none;
   font-weight: normal;
 }
 
@@ -2619,7 +2620,7 @@ input::placeholder {
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: .2em;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .peter #membership .membership--item-apply a {

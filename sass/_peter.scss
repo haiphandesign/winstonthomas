@@ -93,7 +93,7 @@
                 font-size: 5rem;
             }
 
-            display: none;
+            // display: none;
         }
 
         background-color: rgba(black, 0);
@@ -221,6 +221,7 @@
         }
 
         .membership--item-fee {
+            display: none;
             font-weight: normal;
 
             span {
@@ -231,7 +232,7 @@
         .membership--item-apply {
             @include small-text;
 
-            margin-top: 2rem;
+            margin-top: 3rem;
 
             a {
                 border: .2rem solid;
