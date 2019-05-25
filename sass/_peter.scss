@@ -87,7 +87,7 @@
             margin: 0 auto;
             text-align: center;
             // text-shadow: 1.5px 1.5px 0px rgba(0, 0, 0, 0.5);
-            text-shadow: 0 0 5px rgba(white, 0.35);
+            text-shadow: 0 0 5px rgba(black, 0.5);
 
             @include breakpoint(md) {
                 font-size: 5rem;
@@ -96,7 +96,7 @@
             // display: none;
         }
 
-        background-color: rgba(black, 0);
+        background-color: rgba(white, 0.25);
     }
 
     .intro--menu-link {
