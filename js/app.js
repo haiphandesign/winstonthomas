@@ -230,3 +230,9 @@ setTimeout(function () {
     $('#redirect-peter').modal();
     return false;
 }, 100);
+
+
+
+$('.header--menu-item a').click(function () {
+    $('#header').addClass('is-scroll-up');
+})
