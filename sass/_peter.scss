@@ -87,7 +87,7 @@
             margin: 0 auto;
             text-align: center;
             // text-shadow: 1.5px 1.5px 0px rgba(0, 0, 0, 0.5);
-            text-shadow: 0 0 5px rgba(white, 0.25);
+            text-shadow: 0 0 5px rgba(white, 0.35);
 
             @include breakpoint(md) {
                 font-size: 5rem;
@@ -232,7 +232,7 @@
         .membership--item-apply {
             @include small-text;
 
-            margin-top: 3rem;
+            margin-top: 5rem;
 
             a {
                 border: .2rem solid;
