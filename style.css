@@ -2479,9 +2479,6 @@ input::placeholder {
   margin: 0 auto;
   text-align: center;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  background-color: white;
-  text-align: center;
-  padding: 5rem;
 }
 
 @media (min-width: 992px) {
@@ -2584,7 +2581,7 @@ input::placeholder {
 }
 
 .peter #membership .membership--item-info ul:before, .peter #membership .membership--item-info ul:after {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .peter #membership .membership--item-info ul li {
@@ -2600,7 +2597,8 @@ input::placeholder {
 }
 
 .peter #membership .membership--item-info ul li::before {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0);
+  margin: .75rem auto;
 }
 
 .peter #membership .membership--item-info ul li.is-disabled {
@@ -2658,15 +2656,13 @@ input::placeholder {
   width: 100%;
   height: 100%;
   color: white;
-  text-shadow: 1.5px 1.5px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   z-index: 4;
   pointer-events: none;
 }
 
 .peter .private-club-peter--carousel-overlay > div {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 5rem;
 }
 
 .peter .private-club-peter--carousel-overlay h1 {
