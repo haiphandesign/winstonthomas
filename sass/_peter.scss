@@ -19,6 +19,10 @@
         @include small-text;
     }
 
+    .header--left {
+        width: 25%;
+    }
+
     .header--right {
         transform: translateY(1.5rem);
         transition: all .25s;
@@ -53,6 +57,13 @@
         >ul {
             .header--menu-item {
                 @include small-text;
+            }
+        }
+
+        &.is-active {
+            &.header--menu-close {
+                justify-content: flex-end;
+                padding: 0 1rem;
             }
         }
     }

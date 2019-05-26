@@ -2402,6 +2402,10 @@ input::placeholder {
   letter-spacing: .2em;
 }
 
+.peter .header--left {
+  width: 25%;
+}
+
 .peter .header--right {
   -webkit-transform: translateY(1.5rem);
           transform: translateY(1.5rem);
@@ -2437,6 +2441,13 @@ input::placeholder {
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: .2em;
+}
+
+.peter .header--menu-wrapper.is-active.header--menu-close {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 1rem;
 }
 
 .peter .footer--menu-item {
