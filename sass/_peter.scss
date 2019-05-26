@@ -21,6 +21,10 @@
 
     .header--left {
         width: 25%;
+
+        @include breakpoint(md) {
+            width: 100%;
+        }
     }
 
     .header--right {
@@ -61,7 +65,7 @@
         }
 
         &.is-active {
-            &.header--menu-close {
+            .header--menu-close {
                 justify-content: flex-end;
                 padding: 0 1rem;
             }

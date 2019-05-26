@@ -2406,6 +2406,12 @@ input::placeholder {
   width: 25%;
 }
 
+@media (min-width: 992px) {
+  .peter .header--left {
+    width: 100%;
+  }
+}
+
 .peter .header--right {
   -webkit-transform: translateY(1.5rem);
           transform: translateY(1.5rem);
@@ -2443,7 +2449,7 @@ input::placeholder {
   letter-spacing: .2em;
 }
 
-.peter .header--menu-wrapper.is-active.header--menu-close {
+.peter .header--menu-wrapper.is-active .header--menu-close {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
