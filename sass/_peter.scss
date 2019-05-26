@@ -300,7 +300,9 @@
         }
 
         h1 {
-            font-size: 5rem;
+            @include breakpoint(md) {
+                font-size: 5rem;
+            }
         }
 
         h5 {

@@ -2676,8 +2676,10 @@ input::placeholder {
   text-align: center;
 }
 
-.peter .private-club-peter--carousel-overlay h1 {
-  font-size: 5rem;
+@media (min-width: 992px) {
+  .peter .private-club-peter--carousel-overlay h1 {
+    font-size: 5rem;
+  }
 }
 
 .peter .private-club-peter--carousel-overlay h5 {
